@@ -1,6 +1,5 @@
-import React from 'react';
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa'; // Importamos los íconos de React Icons
-import styles from '@/src/styles/footer.module.css'; // Ruta a tu archivo CSS module
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import styles from '../../styles/footer.module.css';
 
 const Footer = () => {
   return (

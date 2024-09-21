@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import BigNav from './Nav/BigNav';
 import SmallNav from './Nav/SmallNav';
 

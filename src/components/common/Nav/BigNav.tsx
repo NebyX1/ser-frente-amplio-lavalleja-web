@@ -1,7 +1,6 @@
-import React from 'react';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import styles from '@/src/styles/navbar.module.css';
-import Logo from '@/src/assets/Logo.webp';
+import styles from '../../../styles/navbar.module.css';
+import Logo from '../../../assets/Logo.webp';
 
 const BigNav = () => {
   return (

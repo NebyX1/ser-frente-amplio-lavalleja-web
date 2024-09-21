@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa"; // Íconos de redes sociales
-import styles from "@/src/styles/navbar.module.css";
-import Logo from "@/src/assets/logo.webp";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import styles from "../../../styles/navbar.module.css";
+import Logo from "../../../assets/Logo.webp";
 
 const SmallNav = () => {
   const [isOpen, setIsOpen] = useState(false);
