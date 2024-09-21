@@ -1,0 +1,48 @@
+---
+/* src/pages/propuestas/Contacto.astro */
+
+import Layout from "@/src/layouts/Layout.astro";
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import styles from "@/src/styles/contacto.module.css";
+---
+<Layout>
+  <title slot="title">Contacto - Ser Lavalleja</title>
+
+  <section class={styles["contacto-section"]}>
+    <div class={styles["intro-container"]}>
+      <h1>¡Participa y Comunícate con Nosotros!</h1>
+      <p>
+        Queremos escuchar tus ideas, propuestas y cualquier inquietud que tengas. Únete a la conversación a través de WhatsApp o envíanos un correo electrónico. Conoce más sobre nuestra candidata Yliana Zeballos y el equipo de la lista 273.
+      </p>
+      <div class={styles["contact-buttons"]}>
+        <a href="https://wa.me/59891000182" target="_blank" rel="noopener noreferrer" class={styles["whatsapp-button"]}>
+          <FaWhatsapp className={styles["icon"]} />
+          Conversar por WhatsApp
+        </a>
+        <a href="mailto:innova.fa.lavalleja@gmail.com" class={styles["email-button"]}>
+          <FaEnvelope className={styles["icon"]} />
+          Enviar Correo
+        </a>
+      </div>
+    </div>
+
+    <div class={styles["address-container"]}>
+      <FaMapMarkerAlt className={styles["address-icon"]} />
+      <p>
+        <strong>Dirección del Comité:</strong> Ciudad de Minas, calles Washington Beltrán 613, casi 25 de Mayo
+      </p>
+    </div>
+
+    <div class={styles["map-container"]}>
+      <iframe
+        src="https://www.google.com/maps?q=-34.37606647094256,-55.23635398907697&hl=es&z=16&output=embed"
+        width="600"
+        height="450"
+        style="border:0;"
+        loading="lazy"
+        title="Ubicación del Comité Ser Lavalleja"
+      ></iframe>
+    </div>
+  </section>
+</Layout>
+

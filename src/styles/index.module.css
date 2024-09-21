@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Estilos Generales */
+.home-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto; /* Altura automática para mantener la proporción */
+  max-height: 800px; /* Altura máxima original de las imágenes */
+  object-fit: contain; /* Mantiene la proporción de la imagen sin recortar */
+  display: block;
+}
+
+.separator {
+  width: 100%;
+  height: 5px;
+  background-color: #ffffff; /* Color de separación */
+}
+
+/* Botones */
+.button-container {
+  text-align: center;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.primary-button,
+.secondary-button,
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-button {
+  background-color: #3498db; /* Azul Primario */
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  background-color: #2ecc71; /* Verde Secundario */
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+}
+
+.whatsapp-button {
+  background-color: #25d366; /* Verde WhatsApp */
+  color: #fff;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-3px);
+}
+
+.whatsapp-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+/* Texto Motivacional */
+.text-container {
+  text-align: center;
+  max-width: 800px;
+  padding: 40px 20px;
+}
+
+.text-container h2 {
+  font-family: 'Lora', serif;
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de WhatsApp */
+.whatsapp-container {
+  text-align: center;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .full-width-image {
+    height: auto; /* Altura automática en pantallas más pequeñas */
+    max-height: 500px; /* Ajuste para pantallas más pequeñas */
+  }
+
+  .text-container h2 {
+    font-size: 2.2em;
+  }
+
+  .text-container p {
+    font-size: 1.1em;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .whatsapp-button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-width-image {
+    height: auto; /* Altura automática en dispositivos más pequeños */
+    max-height: 300px; /* Ajuste para móviles */
+  }
+
+  .text-container h2 {
+    font-size: 1.8em;
+  }
+
+  .text-container p {
+    font-size: 1em;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .whatsapp-button {
+    font-size: 0.95em;
+    padding: 10px 20px;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-width-image {
+    height: auto; /* Altura automática en móviles */
+    max-height: 250px; /* Ajuste final para móviles */
+  }
+
+  .text-container h2 {
+    font-size: 1.5em;
+  }
+
+  .text-container p {
+    font-size: 0.95em;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .whatsapp-button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .whatsapp-icon {
+    font-size: 1.1em;
+    margin-right: 5px;
+  }
+}

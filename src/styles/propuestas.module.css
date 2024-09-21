@@ -1,0 +1,159 @@
+/* src/styles/propuestas.module.css */
+
+.flipContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 10px; /* Espacio reducido entre tarjetas */
+    justify-items: center;
+    align-items: center;
+    padding: 20px; /* Reducir padding para acercar las tarjetas al borde */
+    max-width: 1400px; /* Aumentar el ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+  }
+  
+  .card {
+    width: 700px; /* Tamaño aumentado */
+    height: 450px; /* Tamaño aumentado */
+    perspective: 1200px; /* Aumentar la perspectiva para un mejor efecto 3D */
+    position: relative;
+  }
+  
+  .flipInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card:hover .flipInner {
+    transform: rotateY(180deg);
+  }
+  
+  .flipFront,
+  .flipBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .flipFront {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain; /* Asegura que la imagen esté completamente contenida */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f0f0f0; /* Color de fondo para evitar espacios vacíos */
+  }
+  
+  .flipFront h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el texto */
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.8em;
+    text-align: center;
+  }
+  
+  .flipBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f3f46; /* Fondo oscuro */
+    color: white;
+    transform: rotateY(180deg);
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .flipBack h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+  }
+  
+  .flipBack p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+  
+  .flipBack a {
+    padding: 12px 25px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .flipBack a:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 1500px) {
+    .card {
+      width: 650px;
+      height: 420px;
+    }
+  }
+  
+  @media (max-width: 1400px) {
+    .flipContainer {
+      max-width: 1300px;
+      grid-gap: 10px;
+    }
+  
+    .card {
+      width: 700px;
+      height: 450px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .flipContainer {
+      grid-template-columns: 1fr 1fr; /* Mantener dos columnas */
+      grid-gap: 10px;
+    }
+  
+    .card {
+      width: 600px;
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .flipContainer {
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+      grid-gap: 10px;
+    }
+  
+    .card {
+      width: 90%;
+      height: 350px;
+    }
+  
+    .flipFront h1 {
+      font-size: 1.5em;
+      padding: 10px 20px;
+    }
+  
+    .flipBack h2 {
+      font-size: 1.5em;
+    }
+  
+    .flipBack p {
+      font-size: 1em;
+    }
+  }
+  

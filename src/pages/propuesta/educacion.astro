@@ -1,0 +1,28 @@
+---
+import Layout from "@/src/layouts/Layout.astro";
+import EducationImage from "@/src/assets/Education.webp";
+import styles from "@/src/styles/educacion.module.css";
+---
+<Layout>
+  <title slot="title">Propuesta de Educación - Ser Lavalleja</title>
+
+  <section class={styles["educacion-section"]}>
+    <div class={styles["image-container"]}>
+      <img transition:name="educacion" src={EducationImage.src} alt="Educación para el Futuro" class={styles["educacion-image"]} loading="lazy" />
+    </div>
+    <div class={styles["content-container"]}>
+      <h1>Educación para el Futuro</h1>
+      <p>
+        Adaptándonos a la nueva era tecnológica, impulsamos una agenda educativa que fomente la formación en áreas estratégicas que serán esenciales en los próximos años.
+      </p>
+      <h2>Elevación de Oficios Tradicionales</h2>
+      <p>
+        Proponemos elevar la categoría de los oficios tradicionales, como la albañilería, la carpintería, la sanitaria y otros oficios manuales, al nivel de carreras universitarias, con programas especializados y certificados que permitan a estos trabajadores acceder a más oportunidades. Estos sectores son insustituibles y vitales para el desarrollo de la infraestructura y la industria de nuestro país.
+      </p>
+      <h2>Creación de Nuevas Carreras</h2>
+      <p>
+        Además, debemos analizar profundamente las necesidades productivas de Lavalleja, un departamento severamente afectado por la pérdida de su población, especialmente jóvenes. Proponemos la creación de nuevas carreras universitarias y técnicas relacionadas con la producción alimentaria, la agroindustria, la tecnología y el desarrollo sostenible. Un estudio técnico exhaustivo es necesario para definir las carreras que mejor se adapten a las oportunidades productivas de Lavalleja y sus necesidades futuras.
+      </p>
+    </div>
+  </section>
+</Layout>

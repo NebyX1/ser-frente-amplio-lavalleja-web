@@ -1,0 +1,97 @@
+---
+/* src/components/Propuestas.astro */
+
+import Layout from "../layouts/Layout.astro";
+import styles from "@/src/styles/propuestas.module.css";
+---
+<Layout>
+  <title slot="title">Propuestas - Ser Lavalleja</title>
+
+  <section>
+    <div class={styles.flipContainer}>
+      {/* Propuesta 1: Seguridad Pública */}
+      <div class={styles.card}>
+        <div class={styles.flipInner}>
+          <div
+            class={styles.flipFront}
+            style="background-image: url('/src/assets/Security.webp');"
+            aria-label="Seguridad Pública"
+            transition:name="seguridad"
+          >
+            <h1>Seguridad Pública</h1>
+          </div>
+          <div class={styles.flipBack}>
+            <h2>Seguridad Pública y Rehabilitación</h2>
+            <p>
+              Uruguay necesita un cambio urgente en la estrategia para rehabilitar a las personas privadas de libertad...
+            </p>
+            <a href="/propuesta/seguridad">Leer más</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Propuesta 2: Educación para el Futuro */}
+      <div class={styles.card}>
+        <div class={styles.flipInner}>
+          <div
+            class={styles.flipFront}
+            style="background-image: url('/src/assets/Education.webp');"
+            aria-label="Educación para el Futuro"
+            transition:name="educacion"
+          >
+            <h1>Educación para el Futuro</h1>
+          </div>
+          <div class={styles.flipBack}>
+            <h2>Educación para el Futuro</h2>
+            <p>
+              Adaptándonos a la nueva era tecnológica, impulsamos una agenda educativa que fomente la formación en áreas estratégicas...
+            </p>
+            <a href="/propuesta/educacion">Leer más</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Propuesta 3: Empleo y Desarrollo */}
+      <div class={styles.card}>
+        <div class={styles.flipInner}>
+          <div
+            class={styles.flipFront}
+            style="background-image: url('/src/assets/Jobs.webp');"
+            aria-label="Empleo y Desarrollo"
+            transition:name="empleo"
+          >
+            <h1>Empleo y Desarrollo</h1>
+          </div>
+          <div class={styles.flipBack}>
+            <h2>Empleo y Desarrollo Económico</h2>
+            <p>
+              Lavalleja necesita un plan claro para generar empleo rápidamente mediante programas nacionales y zonas económicas especiales...
+            </p>
+            <a href="/propuesta/empleo">Leer más</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Propuesta 4: Desarrollo Social */}
+      <div class={styles.card}>
+        <div class={styles.flipInner}>
+          <div
+            class={styles.flipFront}
+            style="background-image: url('/src/assets/Family.webp');"
+            aria-label="Desarrollo Social"
+            transition:name="social"
+          >
+            <h1>Desarrollo Social</h1>
+          </div>
+          <div class={styles.flipBack}>
+            <h2>Desarrollo Social</h2>
+            <p>
+              Proponemos medidas concretas para abordar la vivienda, salud mental y violencia de género en Lavalleja...
+            </p>
+            <a href="/propuesta/social">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

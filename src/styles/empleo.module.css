@@ -1,0 +1,114 @@
+/* src/styles/empleo.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+.empleo-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #e8f5e9; /* Fondo ligeramente verde para representar crecimiento económico */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.empleo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.6s;
+}
+
+.content-container h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.content-container h1::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background-color: #4caf50; /* Línea verde para resaltar empleo y crecimiento económico */
+  bottom: -10px;
+  left: 0;
+  border-radius: 5px;
+}
+
+.content-container h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.8em;
+  color: #555;
+  margin-top: 20px;
+}
+
+.content-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .empleo-section {
+    flex-direction: column;
+    padding: 40px 10px;
+    gap: 30px;
+  }
+
+  .content-container h1 {
+    font-size: 2em;
+  }
+
+  .content-container h2 {
+    font-size: 1.5em;
+  }
+
+  .content-container p {
+    font-size: 1em;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

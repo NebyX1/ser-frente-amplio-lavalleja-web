@@ -1,0 +1,74 @@
+---
+/* src/pages/index.astro */
+
+import Layout from "@/src/layouts/Layout.astro";
+import HeaderImg from "@/src/assets/Header.webp";
+import El_CambioImg from "@/src/assets/El_Cambio.webp";
+import IdeasImg from "@/src/assets/Ideas.webp";
+import VozImg from "@/src/assets/Voz.webp";
+import { FaWhatsapp } from "react-icons/fa";
+import styles from "@/src/styles/index.module.css";
+---
+<Layout>
+  <title slot="title">Home - Ser Lavalleja</title>
+
+  <!-- Div1: HeaderImg -->
+  <section class={styles["home-section"]}>
+    <div class={styles["image-container"]}>
+      <img src={HeaderImg.src} alt="Ser Lavalleja - Header" class={styles["full-width-image"]} loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Div2: Separador de 5px -->
+  <div class={styles["separator"]}></div>
+
+  <!-- Div3: El_CambioImg -->
+  <section class={styles["home-section"]}>
+    <div class={styles["image-container"]}>
+      <img src={El_CambioImg.src} alt="El Cambio - Ser Lavalleja" class={styles["full-width-image"]} loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Div4: Botón "Conocé a Yliana" -->
+  <section class={styles["home-section"]}>
+    <div class={styles["button-container"]}>
+      <a href="/yliana" class={styles["primary-button"]}>Conocé a Yliana</a>
+    </div>
+  </section>
+
+  <!-- Div5: IdeasImg -->
+  <section class={styles["home-section"]}>
+    <div class={styles["image-container"]}>
+      <img src={IdeasImg.src} alt="Ideas Innovadoras - Ser Lavalleja" class={styles["full-width-image"]} loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Div6: Texto Motivacional y Botón para Propuestas -->
+  <section class={styles["home-section"]}>
+    <div class={styles["text-container"]}>
+      <h2>Descubre Nuestras Propuestas</h2>
+      <p>
+        Te invitamos a explorar nuestras propuestas diseñadas para transformar Lavalleja. Cada iniciativa está pensada para mejorar la calidad de vida de todos nuestros habitantes y promover un desarrollo sostenible.
+      </p>
+      <a href="/propuestas" class={styles["secondary-button"]}>Ver Propuestas</a>
+    </div>
+  </section>
+
+  <!-- Div7: VozImg -->
+  <section class={styles["home-section"]}>
+    <div class={styles["image-container"]}>
+      <img src={VozImg.src} alt="Voz de la Comunidad - Ser Lavalleja" class={styles["full-width-image"]} loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Div8: Botón de Participación vía WhatsApp -->
+  <section class={styles["home-section"]}>
+    <div class={styles["whatsapp-container"]}>
+      <a href="https://wa.me/59891000182" target="_blank" rel="noopener noreferrer" class={styles["whatsapp-button"]}>
+        <FaWhatsapp className={styles["whatsapp-icon"]} />
+        Participá con Nosotros
+      </a>
+    </div>
+  </section>
+
+</Layout>

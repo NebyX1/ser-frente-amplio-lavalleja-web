@@ -1,0 +1,33 @@
+---
+import Layout from "@/src/layouts/Layout.astro";
+import SocialImage from "@/src/assets/Family.webp";
+import styles from "@/src/styles/social.module.css";
+---
+<Layout>
+  <title slot="title">Propuesta Social - Ser Lavalleja</title>
+
+  <section class={styles["social-section"]}>
+    <div class={styles["image-container"]}>
+      <img transition:name="social" src={SocialImage.src} alt="Desarrollo Social" class={styles["social-image"]} />
+    </div>
+    <div class={styles["content-container"]}>
+      <h1>Desarrollo Social</h1>
+      <p>
+        El desarrollo social es una prioridad que no puede esperar. En Lavalleja, los altos índices de depresión, suicidio y violencia de género son alarmantes y nos ubican entre los peores del mundo en estas áreas. Esta realidad no puede seguir siendo ignorada. Desde Ser Lavalleja, proponemos medidas concretas para abordar estos problemas de manera frontal y efectiva.
+      </p>
+      <h2>Cooperativas de Vivienda</h2>
+      <p>
+        Impulsamos una Ley de Fomento a las Cooperativas de Vivienda, especialmente para jóvenes y población vulnerable. La falta de acceso a una vivienda digna es un factor que contribuye al deterioro social y económico de las familias. Las cooperativas de vivienda no solo ofrecen una solución habitacional, sino que también promueven la organización comunitaria y la solidaridad.
+      </p>
+      <h2>Salud Mental</h2>
+      <p>
+        La salud mental debe ser tratada como una prioridad de salud pública. Proponemos la creación de centros de atención integral para la salud mental en Lavalleja, con recursos suficientes y personal capacitado para abordar de manera efectiva la depresión y el suicidio. Además, es imperativo crear campañas permanentes de concientización y prevención del suicidio, involucrando a las instituciones educativas, sanitarias y comunitarias en un esfuerzo conjunto.
+      </p>
+      <h2>Violencia de Género</h2>
+      <p>
+        La violencia de género debe ser combatida con políticas serias y efectivas. Proponemos la creación de un centro especializado en atención a víctimas de violencia de género en Lavalleja, con un enfoque multidisciplinario que incluya asistencia psicológica, legal y social. No podemos seguir tolerando que Lavalleja esté entre los departamentos con los índices más altos de violencia de género en el país. Es hora de actuar con firmeza y determinación.
+      </p>
+    </div>
+  </section>
+</Layout>
+

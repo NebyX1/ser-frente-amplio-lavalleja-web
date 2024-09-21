@@ -1,0 +1,32 @@
+---
+import Layout from "@/src/layouts/Layout.astro";
+import SecurityImage from "@/src/assets/Security.webp";
+import styles from "@/src/styles/seguridad.module.css";
+---
+<Layout>
+  <title slot="title">Propuesta de Seguridad Pública - Ser Lavalleja</title>
+
+  <section class={styles["seguridad-section"]}>
+    <div class={styles["image-container"]}>
+      <img transition:name="seguridad" src={SecurityImage.src} alt="Seguridad Pública" class={styles["seguridad-image"]} />
+    </div>
+    <div class={styles["content-container"]}>
+      <h1>Seguridad Pública</h1>
+      <p>
+        Uruguay necesita un cambio urgente en la estrategia para rehabilitar a las personas privadas de libertad (PPL). Nuestras cárceles están saturadas y, en lugar de ser centros de rehabilitación, se han convertido en verdaderas escuelas del delito. Esto es un fallo histórico que no puede continuar. No se trata solo de castigar, sino de garantizar que quienes cumplen una condena reciban el acompañamiento necesario para que, al salir en libertad, estén en condiciones de reintegrarse a la sociedad y no reincidan en el delito.
+      </p>
+      <h2>Creación de Centros Penitenciarios Modernos</h2>
+      <p>
+        El Estado tiene la responsabilidad de garantizarle al ciudadano trabajador, honesto y respetuoso de las normas sociales que, cuando una persona privada de libertad sea liberada, esté en condiciones de no volver a cometer delitos. Para esto, proponemos la creación de centros penitenciarios modernos, diseñados bajo los más altos estándares internacionales. Estos centros deben incluir programas avanzados de rehabilitación y recuperación, consultando tanto a la academia nacional como a expertos internacionales. Necesitamos una política penitenciaria que promueva la verdadera reinserción social y que sea efectiva en la reducción de la reincidencia.
+      </p>
+      <h2>Programas Avanzados de Rehabilitación</h2>
+      <p>
+        Los centros penitenciarios modernos deben contar con instalaciones adecuadas y programas especializados que aborden las necesidades individuales de cada persona privada de libertad. Esto incluye acceso a educación, formación profesional, asistencia psicológica y programas de reintegración social. Al proporcionar estas herramientas, aseguramos que las personas estén mejor preparadas para reintegrarse a la sociedad de manera efectiva y positiva.
+      </p>
+      <h2>Consulta con Expertos</h2>
+      <p>
+        Para garantizar la efectividad de estos programas, es esencial consultar tanto a la academia nacional como a expertos internacionales en rehabilitación y reinserción social. Esta colaboración nos permitirá implementar las mejores prácticas y adaptar nuestras políticas a las necesidades específicas de nuestra comunidad.
+      </p>
+    </div>
+  </section>
+</Layout>

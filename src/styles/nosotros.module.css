@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado con estilo */
+.title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  color: #f4811a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Texto principal */
+.textContent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+/* Sección del texto destacado */
+.highlightText {
+  font-weight: 700;
+  color: #f4811a;
+}
+
+/* Efecto de subida de la imagen */
+.imageContainer {
+  width: 100%;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación de subida */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

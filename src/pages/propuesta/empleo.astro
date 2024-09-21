@@ -1,0 +1,28 @@
+---
+import Layout from "@/src/layouts/Layout.astro";
+import EmpleoImage from "@/src/assets/Jobs.webp";
+import styles from "@/src/styles/empleo.module.css";
+---
+<Layout>
+  <title slot="title">Propuesta de Empleo y Desarrollo Económico - Ser Lavalleja</title>
+
+  <section class={styles["empleo-section"]}>
+    <div class={styles["image-container"]}>
+      <img transition:name="empleo" src={EmpleoImage.src} alt="Empleo y Desarrollo Económico" class={styles["empleo-image"]} loading="lazy" />
+    </div>
+    <div class={styles["content-container"]}>
+      <h1>Empleo y Desarrollo Económico</h1>
+      <p>
+        Lavalleja es un departamento con un índice de desempleo preocupante y bajos salarios que afectan directamente a la calidad de vida de sus habitantes. Esta situación requiere una respuesta inmediata, y en Ser Lavalleja proponemos un plan claro y concreto para generar empleo de manera rápida y efectiva.
+      </p>
+      <h2>Programa Nacional de Empleo Juvenil y Población Vulnerable</h2>
+      <p>
+        Proponemos la creación de un Programa Nacional de Empleo Juvenil y otro enfocado en la población vulnerable, específicamente diseñado para departamentos con índices elevados de desempleo como Lavalleja. Estos programas deben incluir formación en áreas productivas, acceso a nuevas tecnologías y estímulos para que los jóvenes se queden en el departamento, evitando la migración hacia otras zonas.
+      </p>
+      <h2>Creación de Zonas Económicas Especiales</h2>
+      <p>
+        Además, es necesario promover la creación de Zonas Económicas Especiales, como zonas francas o parques tecnológicos, para atraer inversiones que generen empleo de calidad y promuevan un desarrollo económico genuino en el departamento. Este modelo ha funcionado en otros países y sería clave para revitalizar la economía de Lavalleja, atrayendo industrias tecnológicas, agroindustriales y manufactureras.
+      </p>
+    </div>
+  </section>
+</Layout>
