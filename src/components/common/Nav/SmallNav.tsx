@@ -101,7 +101,7 @@ const SmallNav = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/59891000182"
+              href="https://wa.me/59892372273"
               target="_blank"
               rel="noopener noreferrer"
               className="text-orange-500 text-2xl"
