@@ -2,10 +2,64 @@
 import Layout from "../layouts/Layout.astro";
 import EquipoImage from "../assets/Equipo.webp";
 import styles from "../styles/nosotros.module.css";
----
 
+const pageTitle = "Nosotros - Ser Lavalleja";
+const pageDescription = "Conoce al equipo detrás de Ser Lavalleja, su misión, visión y compromiso con la transparencia y el desarrollo de Lavalleja.";
+const pageUrl = "https://serlavalleja.info/nosotros/";
+const imageUrl = EquipoImage.src;
+---
+  
 <Layout>
-  <title slot="title">Nosotros - Ser Lavalleja</title>
+  <!-- Metadatos para SEO -->
+
+  <!-- Título de la página -->
+  <title slot="title">{pageTitle}</title>
+
+  <!-- Meta tags adicionales pasados al slot "head" -->
+  <meta slot="head" name="description" content={pageDescription} />
+  <meta slot="head" name="keywords" content="Ser Lavalleja, Nosotros, Equipo, Transparencia, Desarrollo, Lavalleja, Política Honesta, Inclusión, Educación, Salud Mental" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta slot="head" property="og:type" content="website" />
+  <meta slot="head" property="og:title" content={pageTitle} />
+  <meta slot="head" property="og:description" content={pageDescription} />
+  <meta slot="head" property="og:image" content={imageUrl} />
+  <meta slot="head" property="og:url" content={pageUrl} />
+  <meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+
+  <!-- Twitter Card -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={pageTitle} />
+  <meta slot="head" name="twitter:description" content={pageDescription} />
+  <meta slot="head" name="twitter:image" content={imageUrl} />
+  <meta slot="head" name="twitter:url" content={pageUrl} />
+
+  <!-- Canonical URL -->
+  <link slot="head" rel="canonical" href={pageUrl} />
+
+  <!-- Datos Estructurados (Schema.org) -->
+  <script type="application/ld+json" slot="head">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ser Lavalleja",
+      "url": "${pageUrl}",
+      "logo": "${imageUrl}",
+      "description": "${pageDescription}",
+      "sameAs": [
+        "https://www.facebook.com/serlavalleja",
+        "https://twitter.com/serlavalleja",
+        "https://www.instagram.com/serlavalleja"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+598 1234 5678",
+        "contactType": "Customer Service"
+      }
+    }
+  `}
+  </script>
 
   <!-- Sección principal -->
   <section class="bg-white py-12">
@@ -22,22 +76,15 @@ import styles from "../styles/nosotros.module.css";
       <!-- Texto de presentación -->
       <div class={styles.textContent}>
         <p>
-          <span class={styles.highlightText}
-            >Es urgente actuar con coherencia y honestidad.</span
-          > Desde nuestra fundación, nuestra misión ha sido siempre impulsar una
-          agenda política basada en el trabajo honesto, transparente y comprometido.
-          Todos los que integramos Ser Lavalleja somos personas de trabajo, para
-          quienes en política solo valen la transparencia y la coherencia. Nos oponemos
-          firmemente a la vieja política de la mentira y la deshonestidad, esa que
-          dice que todo vale con tal de llegar al poder. Nosotros creemos en un Lavalleja
-          donde la palabra tenga valor y los actos hablen por sí mismos.
+          <span class={styles.highlightText}>Es urgente actuar con coherencia y honestidad.</span> Desde nuestra fundación, nuestra misión ha sido siempre impulsar una
+          agenda política basada en el trabajo honesto, transparente y comprometido. Todos los que integramos Ser Lavalleja somos personas de trabajo, para
+          quienes en política solo valen la transparencia y la coherencia. Nos oponemos firmemente a la vieja política de la mentira y la deshonestidad, esa que
+          dice que todo vale con tal de llegar al poder. Nosotros creemos en un Lavalleja donde la palabra tenga valor y los actos hablen por sí mismos.
         </p>
 
         <p>
-          Ser Lavalleja apuesta a la diversidad de ideas, visiones y fortalezas.
-          Nuestra fortaleza se distingue en nuestra forma de actuar: escuchamos
-          todas las opiniones y somos los portavoces de miradas amplias,
-          representando no solo a un sector, sino a todas las personas que creen
+          Ser Lavalleja apuesta a la diversidad de ideas, visiones y fortalezas. Nuestra fortaleza se distingue en nuestra forma de actuar: escuchamos
+          todas las opiniones y somos los portavoces de miradas amplias, representando no solo a un sector, sino a todas las personas que creen
           en un futuro más justo para nuestro departamento.
         </p>
 
@@ -90,3 +137,4 @@ import styles from "../styles/nosotros.module.css";
     </div>
   </section>
 </Layout>
+

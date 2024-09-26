@@ -2,11 +2,39 @@
 import Layout from "../layouts/Layout.astro";
 import YlianaImage from "../assets/Yliana.webp";
 import styles from "../../src/styles/yliana.module.css";
+
+const pageTitle = "Yliana Zeballos - Ser Lavalleja";
+const pageDescription = "Conoce la trayectoria de Yliana Zeballos, su compromiso con Lavalleja y su lucha por el bienestar de las personas del departamento.";
+const pageUrl = "https://serlavalleja.info/yliana/";
+const imageUrl = YlianaImage.src;
 ---
 
 <Layout>
-  <title slot="title">Yliana Zeballos - Ser Lavalleja</title>
+  <!-- Metadatos para SEO -->
+  
+  <!-- Título de la página -->
+  <title slot="title">{pageTitle}</title>
+  
+  <!-- Meta tags adicionales pasados al slot "head" -->
+  <meta slot="head" name="title" content={pageTitle} />
+  <meta slot="head" name="description" content={pageDescription} />
+  <meta slot="head" name="keywords" content="Yliana Zeballos, Lavalleja, política, SER Lavalleja, educación, inclusión, derechos humanos" />
 
+  <!-- Open Graph para Facebook y otras redes sociales -->
+  <meta slot="head" property="og:type" content="website" />
+  <meta slot="head" property="og:title" content={pageTitle} />
+  <meta slot="head" property="og:description" content={pageDescription} />
+  <meta slot="head" property="og:image" content={imageUrl} />
+  <meta slot="head" property="og:url" content={pageUrl} />
+  <meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+
+  <!-- Twitter Card -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={pageTitle} />
+  <meta slot="head" name="twitter:description" content={pageDescription} />
+  <meta slot="head" name="twitter:image" content={imageUrl} />
+  <meta slot="head" name="twitter:url" content={pageUrl} />
+  
   <!-- Sección principal -->
   <section class={styles.container}>
     <!-- Imagen de Yliana al costado del texto -->

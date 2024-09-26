@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NotFoundImage from "../assets/404.webp";
+
+const pageTitle = "Página no encontrada - Ser Lavalleja";
+const pageDescription = "Lo sentimos, la página que buscas no existe. Regresa al inicio para continuar navegando.";
+const pageUrl = "https://serlavalleja.info";
+const imageUrl = NotFoundImage.src;
+---
+  
+<Layout>
+  <!-- Metadatos para SEO -->
+
+  <!-- Título de la página -->
+  <title slot="title">{pageTitle}</title>
+  
+  <!-- Meta tags adicionales pasados al slot "head" -->
+  <meta slot="head" name="description" content={pageDescription} />
+  <meta slot="head" name="keywords" content="Página no encontrada, 404, error, Ser Lavalleja" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta slot="head" property="og:type" content="website" />
+  <meta slot="head" property="og:title" content={pageTitle} />
+  <meta slot="head" property="og:description" content={pageDescription} />
+  <meta slot="head" property="og:image" content={imageUrl} />
+  <meta slot="head" property="og:url" content={pageUrl} />
+  <meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+
+  <!-- Twitter Card -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={pageTitle} />
+  <meta slot="head" name="twitter:description" content={pageDescription} />
+  <meta slot="head" name="twitter:image" content={imageUrl} />
+  <meta slot="head" name="twitter:url" content={pageUrl} />
+  
+  <!-- Canonical URL -->
+  <link slot="head" rel="canonical" href={pageUrl} />
+  
+  <!-- Datos Estructurados (Opcional pero Recomendado) -->
+  <script type="application/ld+json" slot="head">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "${pageTitle}",
+      "description": "${pageDescription}",
+      "url": "${pageUrl}",
+      "image": "${imageUrl}"
+    }
+  `}
+  </script>
+
+  <!-- Contenido de la página 404 -->
+  <section class="min-h-screen flex flex-col justify-center items-center bg-gray-100 text-center p-6">
+    <!-- Imagen destacada más grande -->
+    <img src={imageUrl} alt="404 Error" class="w-96 h-96 object-cover mb-8" />
+
+    <div class="bg-white shadow-md rounded-lg p-8 max-w-md">
+      <h1 class="text-6xl font-bold text-red-500 mb-4">404</h1>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-6">Página no encontrada</h2>
+      <p class="text-gray-600 mb-6">Lo sentimos, la página que buscas no existe o ha sido movida. Regresa al inicio para continuar navegando.</p>
+      
+      <!-- Botón de redirección -->
+      <a href="/" class="inline-block px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">
+        Volver al inicio
+      </a>
+    </div>
+  </section>
+</Layout>
