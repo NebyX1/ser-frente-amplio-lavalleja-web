@@ -24,7 +24,7 @@ const BigNav = () => {
           <FaInstagram className="text-[#f4811a] text-xl hover:text-pink-500 transition-colors duration-300" />
         </a>
         <a
-          href="https://wa.me/59891000182"
+          href="https://wa.me/59892372273"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialIcon}
