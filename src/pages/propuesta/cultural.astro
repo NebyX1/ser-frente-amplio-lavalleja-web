@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CulturalImage from "../../assets/Culture.webp";
+import styles from "../../styles/cultural.module.css";
+---
+
+<Layout>
+  <title slot="title">Propuesta Cultural - Ser Lavalleja</title>
+
+  <section class={styles["cultural-section"]}>
+    <div class={styles["image-container"]}>
+      <img transition:name="cultural" src={CulturalImage.src} alt="Propuesta Cultural" class={styles["cultural-image"]} />
+    </div>
+    <div class={styles["content-container"]}>
+      <h1>Propuesta Cultural</h1>
+      <p>
+        El desarrollo cultural es un eje neurálgico para el futuro de Lavalleja y de nuestro país. El programa del Frente Amplio pone énfasis en continuar con la descentralización cultural, llevando bienes e infraestructura cultural a aquellos lugares que más lo necesitan. Desde SeR Lavalleja, nos tomamos este compromiso con seriedad, ya que creemos firmemente que en los tiempos de inteligencia artificial y transformación tecnológica, la cultura será más necesaria que nunca para recordarnos nuestra esencia humana.
+      </p>
+      <p>
+        La cultura no es solo un lujo, es un motor de creatividad que potencia el desarrollo de todas las áreas de la sociedad. Acceder a la cultura beneficia no solo a los artistas, sino también a ingenieros, abogados, economistas, médicos, y a todos los que forman parte de nuestra comunidad. La cultura cumple un rol esencial en el bienestar espiritual y psicológico de las sociedades, nutriendo nuestra identidad y promoviendo la cohesión social.
+      </p>
+      <h2>Usina de Producción Cultural</h2>
+      <p>
+        Desde SeR Lavalleja, convocamos a la creación de un acuerdo interpartidario para establecer en nuestro departamento una Usina de Producción Cultural. Esta iniciativa brindaría apoyo a producciones audiovisuales y musicales locales, facilitando el acceso a infraestructura, tecnología y orientación profesional. Creemos que desde Lavalleja pueden surgir productos culturales de alta calidad que no solo enriquezcan nuestro patrimonio, sino que también impulsen la economía naranja, integrando la cultura como un producto competitivo en el mercado nacional e internacional.
+      </p>
+      <p>
+        Es tiempo de apostar por una Lavalleja en la que la cultura sea una prioridad, un pilar de desarrollo y un motor de transformación social.
+      </p>
+    </div>
+  </section>
+</Layout>

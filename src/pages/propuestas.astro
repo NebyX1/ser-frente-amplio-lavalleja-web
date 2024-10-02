@@ -95,6 +95,29 @@ import styles from "../styles/propuestas.module.css";
           </div>
         </div>
       </div>
+
+      {/* Propuesta 5: Cultura */}
+      <div class={styles.card}>
+        <div class={styles.flipInner}>
+          <div
+            class={styles.flipFront}
+            style="background-image: url('/Culture.webp');"
+            aria-label="Cultura"
+            transition:name="cultural"
+          >
+            <h1>Cultura</h1>
+          </div>
+          <div class={styles.flipBack}>
+            <h2>Cultura</h2>
+            <p>
+             Lavalleja necesita mejorar su infraestructura cultural
+             para darle a quienes producen bienes culturales mejores
+             herramientas para crear...
+            </p>
+            <a href="/propuesta/cultural">Leer más</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
